@@ -1,0 +1,113 @@
+@font-face {
+  font-family: OpenSans;
+  src: url('./assets/fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: OpenSansBold;
+  src: url('./assets/fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: Coolvetica;
+  src: url('./assets/fonts/coolvetica-regular.otf');
+}
+
+:root{
+  --gradient:linear-gradient(37deg, rgba(108,8,175,1) 0%, #202269 31%, rgba(45,20,70,1) 76%);
+  --sans1:OpenSans;
+  --sans2:OpenSansBold;
+  --cool:Coolvetica;
+}
+
+.loading{
+  background:var(--gradient);
+  color:transparent;
+  -webkit-background-clip: text;
+  font-size:1.5rem;
+  margin:1rem 0rem;
+}
+
+body {
+  margin: 0;
+  background: rgb(238, 238, 238);
+  font-family: var(--sans1), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.content{
+  /* background:red; */
+  height:100vh;
+  display:grid;
+  grid-template-columns: repeat(13, 1fr);
+  padding:1rem 0rem;
+}
+
+.items{
+  /* background:blue; */
+  grid-column:4/11;
+  display:grid;
+}
+.item{
+  background:white;
+  margin:0.3rem 0.5rem;
+  max-height:10rem;
+  padding:0.3rem;
+  border-radius:8px;
+}
+@media(max-width:1300px) {
+
+  .items{
+    grid-column:2/13;
+  } 
+}
+
+.navbar{
+  background:white;
+  /* padding:1rem; */
+}
+
+.logo{
+  font-family:var(--cool);
+  font-size:2rem;
+  font-weight:bold;
+  padding:0.4rem 0.5rem;
+  color:transparent;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+}
+
+.logo::after{
+  content:'TM';
+  font-family:var(--sans1);
+  font-size:0.5rem;
+  
+}
+
+
+
+
+@media(max-width:768px) {
+
+
+  .content{
+  
+    padding:0rem 0rem;
+  }
+
+  .items{
+    grid-column:1/14;
+  } 
+}
+
+
+
+
