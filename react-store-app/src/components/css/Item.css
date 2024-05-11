@@ -8,7 +8,7 @@
 
 .title{
     font-family: var(--sans2);
-   
+   color:black;
     /* border:1px solid; */
     width:11rem;
     white-space:nowrap;
@@ -50,6 +50,7 @@
 }
 .item-info{
     display:flex;
+    text-decoration: none;
 }
 
 .item{
